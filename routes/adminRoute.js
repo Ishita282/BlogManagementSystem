@@ -6,7 +6,7 @@ adminRoute.use(bodyParser.json());
 adminRoute.use(bodyParser.urlencoded({extended: true}));
 
 adminRoute.set('view engine', 'ejs');
-adminRoute.set('views', './view');
+adminRoute.set('views', '../view');
 
 const multer = require('multer');
 const path = require('path');

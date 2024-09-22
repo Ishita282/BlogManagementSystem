@@ -1,0 +1,15 @@
+1. make a user route
+2. export the user route
+3. install express-session
+4. create a user controller
+4. make loadlogin in controller witth async operation  and try catch, and use it in route
+5. require express-session
+6. make a file config and store and use in user output 
+7. create a file in view login.ejs
+8. incontroller require module and bcryt 
+9. new try catch with name verfiy login require email body and password
+10. verify email
+11. uses if(bcrpty) if(redirect ) else and else(render)
+12. in route get profile 
+13. in admin controller dashboard and use if else
+14. use find one in email 

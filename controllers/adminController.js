@@ -83,5 +83,6 @@ const blogSetupSave = async(req, res) => {
 
 module.exports = {
     login,
-    blogSetup
+    blogSetup,
+    blogSetupSave
 }
