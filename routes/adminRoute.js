@@ -17,7 +17,7 @@ adminRoute.use(express.static('public'));
 const Storage = multer.diskStorage({
 
     destination:function(req,file,cb){
-        cb(null, path.join(__dirname, "./public/images"));
+        cb(null, path.join(__dirname, "../public/images"));
     },
     filename: function(req, file, cb){
         const name = Date.now + '-' + file.originalname;
@@ -28,11 +28,12 @@ const Storage = multer.diskStorage({
 
 const upload = multer({storage:Storage});
 
-const adminController = require("./controllers/adminController")
+const adminController = require("../controllers/adminController")
 
-adminRoute.get('/login', adminController.login);
 adminRoute.get('/blog-setup', adminController.blogSetup);
 adminRoute.post('/blog-setup', upload.single('blog_image'), adminController.blogSetupSave);
+
+adminRoute.get('/dashboard', adminController.dashboard);
 
 
 module.exports = adminRoute;

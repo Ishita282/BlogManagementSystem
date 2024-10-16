@@ -15,11 +15,6 @@ const secure_password = async (password) => {
     }
 }
 
-const login = async (req, res) => {
-
-    res.send("Login is here");
-
-}
 
 const blogSetup = async (req, res) => {
 
@@ -80,9 +75,17 @@ const blogSetupSave = async (req, res) => {
     }
 }
 
+const dashboard = async(req, res) => {
+    try {
+        
+        req.send("Hi admin dashboard is here");
+        
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 module.exports = {
-    login,
     blogSetup,
     blogSetupSave
 }
